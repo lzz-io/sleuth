@@ -76,5 +76,6 @@
 		<module>sleuth-service-a</module>
 		<module>sleuth-service-b</module>
 		<module>sleuth-service-c</module>
+		<module>sleuth-api-gateway</module>
 	</modules>
 </project>
