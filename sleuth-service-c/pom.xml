@@ -5,11 +5,5 @@
     <artifactId>sleuth-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>sleuth-service-a</artifactId>
-  <dependencies>
-  	<dependency>
-  		<groupId>org.springframework.cloud</groupId>
-  		<artifactId>spring-cloud-starter-feign</artifactId>
-  	</dependency>
-  </dependencies>
+  <artifactId>sleuth-service-c</artifactId>
 </project>

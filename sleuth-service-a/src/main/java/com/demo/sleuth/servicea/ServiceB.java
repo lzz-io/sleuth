@@ -1,13 +1,13 @@
 package com.demo.sleuth.servicea;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @FeignClient("SERVICE-B")
-public interface ServerB {
+public interface ServiceB {
 
-	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
-	String index(int id);
+	@RequestMapping(value = "/{id}")
+	String fun2(@PathVariable("id") int id);
 
 }

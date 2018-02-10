@@ -1,10 +1,9 @@
-package com.demo.sleuth.serviceb;
+package com.demo.sleuth.servicec;
 
 import java.util.Date;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -19,9 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableFeignClients
 public class Application {
 
-	@Autowired
-	private ServiceC serviceC;
-
 	public final Logger logger = LoggerFactory.getLogger(Application.class);
 
 	public static void main(String[] args) {
@@ -29,20 +25,20 @@ public class Application {
 	}
 
 	@RequestMapping("/{id}")
-	public String fun2(@PathVariable("id") int id) {
+	public String fun3(@PathVariable("id") int id) {
 
 		try {
-			Thread.sleep(200L);
+			Thread.sleep(300L);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		logger.info("{}", id);
 
-		if (2 == id) {
-			return "service b - id:" + id + " - " + new Date().toString();
+		if (3 == id) {
+			return "service c - id:" + id + " - " + new Date().toString();
 		}
 
-		return serviceC.fun3(id);
+		return "service c - id:" + id + " - " + new Date().toString();
 	}
 
 }

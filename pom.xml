@@ -75,5 +75,6 @@
 		
 		<module>sleuth-service-a</module>
 		<module>sleuth-service-b</module>
+		<module>sleuth-service-c</module>
 	</modules>
 </project>

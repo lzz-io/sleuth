@@ -6,4 +6,10 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>sleuth-service-b</artifactId>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.springframework.cloud</groupId>
+  		<artifactId>spring-cloud-starter-feign</artifactId>
+  	</dependency>
+  </dependencies>
 </project>
