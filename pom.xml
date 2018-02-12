@@ -38,6 +38,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -71,11 +75,10 @@
 
 	<modules>
 		<module>sleuth-eureka</module>
-		
-		
 		<module>sleuth-service-a</module>
 		<module>sleuth-service-b</module>
 		<module>sleuth-service-c</module>
 		<module>sleuth-api-gateway</module>
+		<module>sleuth-zipkin-service</module>
 	</modules>
 </project>
