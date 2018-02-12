@@ -23,14 +23,14 @@ public class Application {
 	@Resource
 	private ServiceC serviceC;
 
-	public final Logger logger = LoggerFactory.getLogger(Application.class);
+	private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
 
 	@RequestMapping("/{id}")
-	public String fun2(@PathVariable("id") int id) {
+	public String fun2(@PathVariable("id") int id) throws Exception {
 
 		try {
 			Thread.sleep(200L);
@@ -40,7 +40,13 @@ public class Application {
 		logger.info("{}", id);
 
 		if (2 == id) {
-			return "service b - id:" + id + " - " + new Date().toString();
+			// try {
+			throw new Exception("service-b 异常！");
+			// } catch (Exception e) {
+			// e.printStackTrace();
+			// }
+			// // return "service b - id:" + id + " - " + new Date().toString();
+			// return null;
 		}
 
 		return serviceC.fun3(id);
